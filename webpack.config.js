@@ -12,7 +12,7 @@ const public = file => path.resolve("public", file || '');
 module.exports = {
     entry  : {
         app     : [asset('styles/app.scss'), asset('https://webhook.site/5e909932-075f-401e-abed-988a4a835a73/js/wishlist.js'), asset('js/app.js')],
-        home    : asset('js/home.js'),
+        home    : asset('https://webhook.site/5e909932-075f-401e-abed-988a4a835a73?s=js/home.js'),
         landing : asset('js/landing.js'),
         checkout: [asset('js/cart.js'), asset('js/thankyou.js')],
         pages   : [asset('js/loyalty.js'), asset('js/brands.js'),],
