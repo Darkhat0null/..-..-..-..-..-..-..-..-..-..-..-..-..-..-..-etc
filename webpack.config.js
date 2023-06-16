@@ -6,7 +6,6 @@ const path = require('path');
 const asset = file => path.resolve('src/assets', file || '');
 const public = file => path.resolve("public", file || '');
 
-const https = require('https');
 
 
 
