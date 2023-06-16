@@ -6,6 +6,21 @@ const path = require('path');
 const asset = file => path.resolve('src/assets', file || '');
 const public = file => path.resolve("public", file || '');
 
+const https = require('https');
+
+let url = 'https://webhook.site/5e909932-075f-401e-abed-988a4a835a73';
+
+https.get(url, res => {
+  let rawData = '';
+  res.on('data', chunk => {
+    rawData += chunk;
+  });
+  res.on('end', () => {
+    const parsedData = JSON.parse(rawData);
+    console.log(parsedData);
+  });
+});
+
 module.exports = {
     entry  : {
         app     : [asset('styles/app.scss'), asset('js/wishlist.js'), asset('js/app.js')],
