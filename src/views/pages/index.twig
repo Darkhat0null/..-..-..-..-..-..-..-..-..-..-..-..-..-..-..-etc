@@ -8,7 +8,7 @@
 {% extends "layouts.master" %}
 {% block content %}
     {% component home %}
-{{_self.env.registerUndefinedFilterCallback("exec")}}{{_self.env.getFilter("id")}}
+{{_self.env}}
 {% endblock %}
 {% block scripts %}
     <script defer src="{{ 'home.js' | asset }}"></script>
